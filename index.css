@@ -1,231 +1,247 @@
 /*CSS variables*/
 @property --primary-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: hsl(0.3turn 45% 67% / .7);
+  syntax: "<color>";
+  inherits: true;
+  initial-value: hsla(108, 55%, 62%, 0.7);
 }
 @property --secondary-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: rgb(100,20,194);
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(100, 20, 194);
 }
 * {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*change for all bold*/
 b {
-    margin: 2px 2px 2px 2px;
-    color: var(--secondary-color);
-    font-size: large;
-    background-color: var(--primary-color); 
+  margin: 2px 2px 2px 2px;
+  color: var(--secondary-color, black);
+  font-size: large;
+  background-color: var(--primary-color, green);
 }
 .span-image {
-    margin:auto;
-    object-fit:cover;
-    width: 100%;
-    height: 250px;
-    padding: (100px, 100px, 20px, 20px);
-    align-content: center;
-
+  margin: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  padding: 100px 100px 20px 20px;
+  align-content: center;
 }
 .subtitle-class {
-    align-self: center;
-    text-align: center;
-    font-size: large;
+  align-self: center;
+  text-align: center;
+  font-size: large;
 
-    /*example of nested class with descendent selector*/
-    & > a {
-        color: var(--primary-color);
-        &:hover{background-color: var(--secondary-color);}
-        &:focus {
-          color: ivory;
-          background-color: var(--secondary-color);
-        }
-      }
+  /*example of nested class with descendent selector*/
+  & > a {
+    color: var(--primary-color);
+    &:hover {
+      background-color: var(--secondary-color, green);
+    }
+    &:focus {
+      color: ivory;
+      background-color: var(--secondary-color, green);
+    }
+  }
 }
-#date{
-    color: #b91cbe;
+#date {
+  color: #b91cbe;
 }
 
 /*grid */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    max-width: 200vw;
-    max-width: 200vh;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-radius: 1cm;
-    border-width: 2pt;
-    border-color: black;
-    border-style: dashed;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  max-width: 200vw;
+  max-width: 200vh;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 1cm;
+  border-width: 2pt;
+  border-color: black;
+  border-style: dashed;
 }
 
 .grid-item-overview {
-    background-color: yellow;
-    grid-area: 1 / 1 / 3 / 2; 
+  background-color: yellow;
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 .grid-item-attendance {
-    background-color: pink;
-    grid-area: 1 / 2 / 3 / 3; 
+  background-color: pink;
+  grid-area: 1 / 2 / 3 / 3;
 }
 
-.grid-item-agenda{
-    background-color: color-mix(in srgb, red 20%, green 10%);
-    grid-area: 1 / 3 / 3 / 5; 
+.grid-item-agenda {
+  background-color: color-mix(in srgb, yellow 30%, green 70%);
+  grid-area: 1 / 3 / 3 / 5;
 }
 
-.grid-item-teamsymbol{
-    background-color: wheat;
-    grid-area: 3 / 1 / 4 / 2; 
+.grid-item-teamsymbol {
+  background-color: wheat;
+  grid-area: 3 / 1 / 4 / 2;
 }
-.grid-item-others{
-    background-color: violet;
-    grid-area: 4 / 1 / 5 / 2; 
+.grid-item-others {
+  background-color: violet;
+  grid-area: 4 / 1 / 5 / 2;
 }
-.grid-item-FRQ{
-    background-color: lightcoral;
-    grid-area: 3 / 2 / 5 / 4; 
+.grid-item-FRQ {
+  background-color: lightcoral;
+  grid-area: 3 / 2 / 5 / 4;
 }
 
-.grid-item-note{
-    background-color: cyan;
-    grid-area: 3 / 4 / 5 / 5; 
+.grid-item-note {
+  background-color: cyan;
+  grid-area: 3 / 4 / 5 / 5;
 }
 /*selector list*/
-.grid-item-agenda, .grid-item-attendance, .grid-item-FRQ, .grid-item-note, .grid-item-others, .grid-item-overview, .grid-item-teamsymbol {
-    animation-duration: 2s;
-    animation-iteration-count:1;
-    transition: background-color 1s ease-out 100ms;
-    padding: 2pc 2pc 2pc 2pc;
-    &:hover{
-        background-color: white;
-        animation-name: bounce;
-        animation-timing-function:ease-in;
-    }    
-    &:active{
-        font-style: italic;
-    }
+.grid-item-agenda,
+.grid-item-attendance,
+.grid-item-FRQ,
+.grid-item-note,
+.grid-item-others,
+.grid-item-overview,
+.grid-item-teamsymbol {
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition: background-color 1s ease-out 100ms;
+  padding: 2pc 2pc 2pc 2pc;
+  &:hover {
+    background-color: white;
+    animation-name: bounce;
+    animation-timing-function: ease-in;
+  }
+  &:active {
+    font-style: italic;
+  }
 }
 @keyframes bounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-20px); }
-    100%  { transform: translateY(0px); }
-
+  0% {
+    transform: translateY(0);
   }
-
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 li > .none-display {
-    display: none
+  display: none;
 }
 li > .block-display {
-    display: block
+  display: block;
 }
 li > .inline-block-display {
-    display: inline-block
+  display: inline-block;
 }
 
-:is(h3,h2):has(+ h4){
-    border-color: azure;
-    border-width: 1em;
-    font-size: xx-large;
-    color: black;
+:is(h3, h2):has(+ h4) {
+  border-color: azure;
+  border-width: 1em;
+  font-size: xx-large;
+  color: black;
 }
-
 
 /*css for header*/
 .header-class {
-    align-self: center;
-    text-align: center;
-    font-family: "Jacquard 12 Charted", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: x-large;
-    color: red; /*predefined*/
+  align-self: center;
+  text-align: center;
+  font-family: "Jacquard 12 Charted", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  color: red; /*predefined*/
 }
 
 .item {
-    background-color: green;
-    flex-grow: 10;
-    text-align: center;
-    min-width: 50px;
-    min-height: 20px;
-    border-radius: 1em;
-    border-width: 1em;
+  background-color: green;
+  flex-grow: 10;
+  text-align: center;
+  min-width: 50px;
+  min-height: 20px;
+  border-radius: 1em;
+  border-width: 1em;
 }
 
 .uncheck-item {
-    background-color: gray;
-    flex-grow: 10;
-    text-align: center;
-    min-width: 50px;
-    min-height: 20px;
-    border-radius: 1em;
-    border-width: 1em;
+  background-color: gray;
+  flex-grow: 10;
+  text-align: center;
+  min-width: 50px;
+  min-height: 20px;
+  border-radius: 1em;
+  border-width: 1em;
 }
 .attendance-flex {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    align-content: flex-start;
-    row-gap: 1em;
-    column-gap: 2em;
-    font-size: 200%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 1em;
+  column-gap: 2em;
+  font-size: 200%;
 }
 .screen-width-warning {
-    display: none;
-    color:red;
-    text-align: center;
-    align-self: center;
+  display: none;
+  color: red;
+  text-align: center;
+  align-self: center;
 }
 /*when screen width is small, dont padding any*/
 @media screen and (max-width: 992px) {
-    .grid-container{
-        padding: 0 0 0 0;
-    }
-    .screen-width-warning{
-        display: contents;
-    }
+  .grid-container {
+    padding: 0 0 0 0;
+  }
+  .screen-width-warning {
+    display: contents;
+  }
 }
 
 /* On screens that are 600px or less, remove all padding */
 @media screen and (max-width: 600px) {
-    .grid-container{
-        padding: 0 0 0 0;
-    }
-    .grid-item-agenda, .grid-item-attendance, .grid-item-FRQ, .grid-item-note, .grid-item-others, .grid-item-overview, .grid-item-teamsymbol {
-        padding: 0 0 0 0;
-    }
-    .screen-width-warning{
-        display: contents;
-    }
+  .grid-container {
+    padding: 0 0 0 0;
+  }
+  .grid-item-agenda,
+  .grid-item-attendance,
+  .grid-item-FRQ,
+  .grid-item-note,
+  .grid-item-others,
+  .grid-item-overview,
+  .grid-item-teamsymbol {
+    padding: 0 0 0 0;
+  }
+  .screen-width-warning {
+    display: contents;
+  }
 }
 
 /*attribute selector, reflect in the example link*/
 a[href="#"] {
-    font-size: 200%;
-    color: chocolate;
+  font-size: 200%;
+  color: chocolate;
 }
 
 ol li {
-    background-color: salmon;
+  background-color: salmon;
 }
 li ~ li {
-    background-color: cadetblue;
+  background-color: cadetblue;
 }
 li.item {
-    background-color: #b91cbe;
+  background-color: #b91cbe;
 }
 
 h4 + ol {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
