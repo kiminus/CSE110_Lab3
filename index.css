@@ -1,12 +1,12 @@
 /*CSS variables*/
 @property --primary-color {
   syntax: "<color>";
-  inherits: false;
+  inherits: true;
   initial-value: hsla(108, 55%, 62%, 0.7);
 }
 @property --secondary-color {
   syntax: "<color>";
-  inherits: false;
+  inherits: true;
   initial-value: rgb(100, 20, 194);
 }
 * {
