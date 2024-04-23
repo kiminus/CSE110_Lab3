@@ -16,9 +16,9 @@
 /*change for all bold*/
 b {
   margin: 2px 2px 2px 2px;
-  color: var(--secondary-color);
+  color: var(--secondary-color, black);
   font-size: large;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, green);
 }
 .span-image {
   margin: auto;
@@ -37,11 +37,11 @@ b {
   & > a {
     color: var(--primary-color);
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--secondary-color, green);
     }
     &:focus {
       color: ivory;
-      background-color: var(--secondary-color);
+      background-color: var(--secondary-color, green);
     }
   }
 }
