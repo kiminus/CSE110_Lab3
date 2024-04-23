@@ -3,60 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon"
- href="https://example.com/image.ico">
-    <title>[CSE 110] Lab 2</title>
+    <link rel="icon" type="image/x-icon" href="https://example.com/image.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>[CSE 110] Lab 3</title>
 </head>
 <body>
-    <header>[CSE 110] Lab 2, <a href="https://github.com/CSE110-FA22/Lab2_Starter"> link to original repository </a></header>
+    <header class = "header-class">
+        [CSE 110] Lab 3, <a href="https://github.com/CSE110-FA22/Lab2_Starter"> link to original repository </a>
+    </header>
     <div>
-        <img src ="meeting_img.png" alt = "meeting_image" width = "400">
-        
-        <h1>Game design starter - meeting 1</h1>
-        <h2><em>Overview</em>, framework building</h2>
-        <h3>4/13/2024 </h3>
-        <details>
-            <summary><a><b>Meeting Summary:</b></a></summary>
-            <p>What is an FPS Game?
-                An FPS (First-Person Shooter) game is a video game where players experience the game from a first-person perspective. In these games, you control a character armed with firearms and engage in combat with enemies. Here are some key points about FPS games:
-                
-                Perspective: You view the game world directly through the eyes of the main character. This immersive perspective puts you right in the action.
-                Fast-Paced Action: FPS games are known for their fast-paced gameplay. Quick reflexes, precision aiming, and split-second decision-making are essential.
-                Weapon-Based Combat: The core gameplay revolves around using various weapons (guns, rifles, grenades, etc.) to eliminate opponents.
-                Tactical Thinking: Successful FPS play requires strategic thinking. You must consider cover, movement, and positioning to outwit your foes.
-                Popular Titles: Some well-known FPS games include classics like Halo, Call of Duty, and Counter-Strike. However, there are also beginner-friendly options that make the genre accessible to newcomers.</p>
-          </details>
-          
-        <p>Team music: <br>
-            <audio controls><source src="Someone_Like_You.flac"></audio></p>
-        <div class = "attenance-container">
-            <h3>attendance</h3>
-            <ul>
-                <li>John</li>
-                <li>Tim</li>
-                <li>Henry</li>
-            </ul>
-        </div>
-        <div class = "agenda-container">
-            <h3>Agenda</h3>
-            <div class = "tasks-collection-container">
-                <h4>from last meeting:</h4>
+        <img class ="span-image" src ="meeting_img.png" alt = "meeting_image" width = "400">
+        <h1 class = "screen-width-warning">Your screen width is too small</h1>
+        <h1 style="align-self: center; text-align: center;">Game design starter</h1>
+        <h4 class="subtitle-class">meeting 1</h4>
+        <h4 class="subtitle-class" id = "date">4/13/2024 <a href="#">Example link</a> </h4>
+        <div class = "grid-container">
+            <div class = "grid-item-overview">
+                <h2 class="header-class"><em>Overview</em>, framework building</h2>
+                <details style="position: sticky;">
+                    <summary><a><b>Meeting Summary:</b></a></summary>
+                    <p>What is an FPS Game?
+                        An FPS (First-Person Shooter) game is a video game where players experience the game from a first-person perspective. In these games, you control a character armed with firearms and engage in combat with enemies. Here are some key points about FPS games:
+                        
+                        Perspective: You view the game world directly through the eyes of the main character. This immersive perspective puts you right in the action.
+                        Fast-Paced Action: FPS games are known for their fast-paced gameplay. Quick reflexes, precision aiming, and split-second decision-making are essential.
+                        Weapon-Based Combat: The core gameplay revolves around using various weapons (guns, rifles, grenades, etc.) to eliminate opponents.
+                        Tactical Thinking: Successful FPS play requires strategic thinking. You must consider cover, movement, and positioning to outwit your foes.
+                        Popular Titles: Some well-known FPS games include classics like Halo, Call of Duty, and Counter-Strike. However, there are also beginner-friendly options that make the genre accessible to newcomers.</p>
+                  </details>
+            </div>
+            <div class = "grid-item-attendance">
+                <h3 class="header-class">attendance</h3>
+                <div class="attendance-flex">
+                    <div class="item">John</div>
+                    <div class="item">John</div>
+                    <div class="item">John</div>
+                    <div class="item">Alex</div>
+                    <div class="item">HILD</div>
+                    <div class="item">BAS</div>
+                    <div class="item">Cryamalida</div>
+                    <div class="item">Jusnasd</div>
+                    <div class="item">Juaggarnt</div>
+                    <div class="uncheck-item">Juaggarnt</div>
+                    <div class="uncheck-item">Bile</div>
+                    <div class="uncheck-item">Warrior</div>
+
+                </div>
+            </div>
+            <div class = "grid-item-agenda">
+                <h3 class="header-class">Agenda</h3>
+                    <div class = "tasks-collection-container">
+                        <h4>from last meeting:</h4>
+                        <ol>
+                            <li>assign roles to each member</li>
+                            <li>team formation</li>
+                        </ol>
+                        <h4>New tasks/new bussiness</h4>
+                        <ol>
+                            <li>decide game genre and tag</li>
+                            <li>decide due date and develop calender</li>
+                            <li class="item">design general workload for each department</li>
+                        </ol>
+                    </div>
+            </div>
+            <div class = "grid-item-teamsymbol">       
+                <h3 class="header-class">Team music:</h3> <br>
+                <audio controls><source src="Someone_Like_You.flac"></audio>
+            </div>
+            <div class = "grid-item-FRQ">
+                <h3 class="header-class">Frequently asked questions:</h3>
+                <div>
+                    <section>
+                        <p><strong>Q:</strong> When is project due?</p>
+                        <p><strong>A:</strong> 2/31/25</p>
+                    </section>
+                </div>
+            </div>
+            <div class = "grid-item-note">        
+                <h3 class="header-class">Meeting Notes:</h3>
+                <img src = "data:image/jpeg;base64,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" alt = "Meeting image">
+                <h4 class="header-class">Meeting video: </h4>
+                <video controls width="320" height="240">
+                    <source src="sample_video.mp4">
+                </video>
+            </div>
+            <div class = "grid-item-others">
+                <h3 class="header-class">Links</h3>
                 <ol>
-                    <li>assign roles to each member</li>
-                    <li>team formation</li>
-                </ol>
-                <h4>New tasks/new bussiness</h4>
-                <ol>
-                    <li>decide game genre and tag</li>
-                    <li>decide due date and develop calender</li>
-                    <li>design general worklord for each department</li>
+                    <li><a href = "standup.md">standup file</a></li>
+                    <li><a href = "#task_profile">setup your profile</a></li>
+                    <li>Link: <a href = "#task_profile" class="none-display">none display</a></li>
+                    <li>Link: <a href = "#task_profile" class="block-display">display block</a></li>
+                    <li>Link: <a href = "#task_profile" class="inline-block-display">display inline block</a></li>
                 </ol>
             </div>
         </div>
-        <hr>
+        
+        
+
+          
+
+
+
         <div class = "tasks-container">
             <h3>Tasks for every team member:</h3>
-            <h4>set up your profile</h4>
+            <h4 class="header-class" id = "task_profile">Set up your profile</h4>
             <span>&#9734; make sure to complete it before 4/29</span>
             <form>
                 <div>
@@ -94,15 +149,7 @@
             You may technically use any browsers’ DevTools for this section, but this lab will be written with Chrome DevTools in mind.
         </p>
     </div>
-    <div>
-        <h3>Frequently asked questions:</h3>
-        <div>
-            <section>
-                <p><strong>Q:</strong> When is project due?</p>
-                <p><strong>A:</strong> 2/31/25</p>
-            </section>
-        </div>
-    </div>
+    
     <div>
         <h2>methods</h2>
         <div>
@@ -112,15 +159,7 @@
     </div>
 
 
-    <div>
-        <h3>Meeting Notes:</h3>
-        <img src = "data:image/jpeg;base64,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" alt = "Meeting image">
-        <h4>Meeting video: </h4>
-        <video controls width="320" height="240">
-            <source src="sample_video.mp4">
-        </video>
-    </div>
-    <footer><p><i>[CSE 110] Lab 2, zilin liu</i></p></footer>
+    <footer><p><i>[CSE 110] Lab 3, zilin liu</i></p></footer>
 </body>
 
 </html>
